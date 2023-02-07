@@ -114,9 +114,11 @@ div[game] > #hero {
 
 div[game] > #play {
   position: absolute;
+  inset: 0;
   top: 60%;
-  right: 45%;
-  padding: 8px 40px;
+  margin-inline: auto;
+  max-width: 150px;
+  height: 60px;
   border: none;
   font-size: 24px;
   color: #fff;
