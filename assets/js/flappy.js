@@ -173,8 +173,10 @@ class FlappyBird {
   }
 
   restart() {
-    this.highScore.points = 0;
-    this.highScore.updateProgress(this.score.points);
+    if (this.score.points > this.highScore.points) {
+      this.highScore.points = 0;
+      this.highScore.updateProgress(this.score.points);
+    }
     this.stop();
     this.removeElements();
     this.play();
