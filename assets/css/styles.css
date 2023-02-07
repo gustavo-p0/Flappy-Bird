@@ -1,0 +1,124 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  font-family: "Unbounded", cursive;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+body header {
+  padding: 32px;
+  text-align: center;
+  background-color: wheat;
+}
+
+body header h1 {
+  font-size: 2.4rem;
+}
+
+div[game] {
+  position: relative;
+  border: 5px solid black;
+  height: 700px;
+  width: 1200px;
+  margin: 16px auto;
+  overflow: hidden;
+  background: linear-gradient(#ffdd00, #fbb034);
+}
+
+div[game] > #bird {
+  width: 60px;
+  position: absolute;
+  left: calc(50% - 30px);
+  /* bottom: 50%; */
+}
+
+div[game] > #barriers-pair {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#barriers-pair > .barrier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barrier > .border {
+  height: 30px;
+  width: 130px;
+  background: linear-gradient(90deg, #639301, #a5e82e);
+  border: 2px solid #000;
+}
+
+.barrier > .body {
+  height: 150px;
+  width: 110px;
+  background: linear-gradient(90deg, #639301, #a5e82e);
+  border-inline: 2px solid #000;
+}
+
+div[game] > #progress {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: whitesmoke;
+  font-size: 40px;
+  font-family: "Press Start 2P", cursive;
+}
+
+div[game] > #highscore {
+  position: absolute;
+  z-index: 1;
+  left: 10px;
+  bottom: 10px;
+  color: rgb(179, 179, 179);
+  font-size: 40px;
+  font-family: "Press Start 2P", cursive;
+}
+
+div[game] > .restart {
+  position: absolute;
+  margin: 8px 16px;
+  font-size: 64px;
+  background-color: transparent;
+  border: none;
+  z-index: 2;
+}
+
+div[game] > .restart:hover {
+  color: white;
+}
+
+div[game] > #hero {
+  position: absolute;
+  top: 15%;
+  right: 25%;
+  width: 50%;
+}
+
+div[game] > #play {
+  position: absolute;
+  top: 60%;
+  right: 45%;
+  padding: 8px 40px;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  background: linear-gradient(to right, #a5e82e, #8cd200);
+}
